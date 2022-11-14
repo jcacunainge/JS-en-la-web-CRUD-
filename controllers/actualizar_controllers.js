@@ -1,7 +1,5 @@
 import { clientService } from "../service/client-service.js";
 
-
-
 const obtenerInformacion= () => {
     const url = new URL(window.location); // obtenemos la url en la que estamos actualmente 
     const id = (url.searchParams.get("id")); // obtenemos el id, or medio params, es decir el identificador 
