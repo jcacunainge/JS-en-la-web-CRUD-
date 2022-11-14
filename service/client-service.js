@@ -1,3 +1,4 @@
+
 const listaCliente = () => fetch("http://localhost:3000/perfil").then((respuesta) => respuesta.json());
 
 const crearCliente = (nombre, email)=> {
@@ -14,17 +15,16 @@ const eliminarCliente = (id) => {
     })
 }
 
-const detalleClient = (id) => {
-    return fetch(`http://localhost:3000/perfil/${id}`).then(respuesta => {
-        console.log(respuesta)
-    });
+const detalleCliente = (id) => {
+    return fetch(`http://localhost:3000/perfil/${id}`).then(respuesta => respuesta.json()
+    );
 }
 
 export const clientService = {
     listaCliente,
     crearCliente,
     eliminarCliente,
-    detalleClient,
+    detalleCliente,
 }
 
 
